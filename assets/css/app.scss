@@ -1,0 +1,17 @@
+$canvas-height: 500px;
+$canvas-width: 500px;
+
+div#canvas {
+    display: grid;
+    height: $canvas-height;
+    width: $canvas-width;
+    border: 1px solid black;
+
+    .pixel {
+        border: 1px solid black;
+    }
+}
+
+.close {
+    display: none;
+}
