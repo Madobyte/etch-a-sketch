@@ -1,21 +1,18 @@
-export default function setGridSize() {
+export default function btnSetGridSize() {
     const sizeBtn = document.createElement('button');
     sizeBtn.classList.add('size-btn');
     sizeBtn.innerText = 'Size';
+    const dropDownIcon = document.createElement('i');
+    dropDownIcon.classList.add('fa', 'fa-sort-desc');
+    sizeBtn.appendChild(dropDownIcon);
     const toolbar = document.querySelector('.toolbar');
     toolbar.appendChild(sizeBtn);
-    
 
-    sizeBtn.addEventListener('mouseenter' || 'click', () => {
+    sizeBtn.addEventListener('click', () => {
         const sizeMenu = document.querySelector('.size-menu');
         if(!sizeMenu) constructSizeMenu();
-        setTimeout(showSizeMenu, 800);
+        showSizeMenu();
     });
-
-    sizeBtn.addEventListener('mouseleave', () => {
-        const sizeMenu = document.querySelector('.size-menu');
-        if (!sizeMenu) console.log('hello')
-    })
 }
 
 function showSizeMenu() {
@@ -29,6 +26,7 @@ function constructSizeMenu() {
 
     const rangeInput = document.createElement('input');
     rangeInput.type = 'range';
+    rangeInput.id = 'range-input';
 
     const textInput = document.createElement('input');
     textInput.type = 'text';
@@ -37,5 +35,6 @@ function constructSizeMenu() {
     sizeMenu.appendChild(textInput);
 
     const toolbar = document.querySelector('.toolbar');
-    toolbar.appendChild(sizeMenu);
+    const sizeBtn = document.querySelector('.size-btn');
+    toolbar.insertBefore(sizeMenu, sizeBtn.nextSibling);
 }

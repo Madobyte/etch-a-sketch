@@ -1,4 +1,4 @@
-export default function construct(number) {
+export default function construct(number = 64) {
     const canvas = document.createElement('div');
     canvas.id = 'canvas';
     var i;
@@ -17,6 +17,6 @@ function putInGrid(number) {
     const pixel = document.querySelectorAll('.pixel');
     pixel.forEach((div) => {
         div.style.cssText = `height: $canvas-height / ${number}px;
-        width: $canvas-width / ${number}px;`
+            width: $canvas-width / ${number}px;`
     })
 }

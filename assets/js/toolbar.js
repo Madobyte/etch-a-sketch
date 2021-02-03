@@ -1,4 +1,8 @@
-import setGridSize from './setGridSize.js'
+import btnSetGridSize from './btnSetGridSize.js'
+import btnSave from './btnSave.js'
+import { btnColor } from './btnSetColor.js'
+import btnEraser from './btnEraser.js'
+import btnClear from './btnClear.js'
 
 export default function toolbar() {
     const toolbar = document.createElement('div');
@@ -6,5 +10,9 @@ export default function toolbar() {
     const canvas = document.getElementById('canvas');
     document.body.insertBefore(toolbar, canvas);
 
-    setGridSize();
+    btnSetGridSize();
+    btnSave();
+    btnColor();
+    btnEraser();
+    btnClear();
 }

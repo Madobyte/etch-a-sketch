@@ -8,7 +8,10 @@ div#canvas .pixel {
   border: 1px solid black;
 }
 
-.close {
+.toolbar .menu {
+  position: absolute;
+}
+.toolbar .close {
   display: none;
 }
 

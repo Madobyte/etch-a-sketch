@@ -11,7 +11,11 @@ div#canvas {
         border: 1px solid black;
     }
 }
-
-.close {
-    display: none;
+.toolbar {
+    .menu {
+        position: absolute;
+    }
+    .close {
+        display: none;
+    }
 }
