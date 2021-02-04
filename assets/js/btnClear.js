@@ -1,6 +1,6 @@
 export default function btnClear() {
     const clearBtn = document.createElement('button');
-    clearBtn.classList.add('clear-btn');
+    clearBtn.classList.add('clear-btn', 'btn');
     clearBtn.innerText = 'Clear';
     const toolbar = document.querySelector('.toolbar');
     toolbar.appendChild(clearBtn);

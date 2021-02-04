@@ -7,7 +7,9 @@ export default function construct(number = 64) {
         pixel.classList.add('pixel');
         canvas.appendChild(pixel);
     }
-    document.body.prepend(canvas);
+    const toolbar = document.querySelector('.toolbar');
+    const appContainer = document.getElementById('app-container');
+    appContainer.insertBefore(canvas, toolbar.nextSibling);
     putInGrid(number);
 }
 

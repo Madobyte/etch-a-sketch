@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 div#canvas {
   display: grid;
   height: 500px;
@@ -6,13 +7,124 @@ div#canvas {
 }
 div#canvas .pixel {
   border: 1px solid black;
+  transition: transform 0.5s;
+}
+div#canvas .pixel:hover {
+  transform: scale(2);
 }
 
+.toolbar {
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
 .toolbar .menu {
+  display: flex;
   position: absolute;
+  top: 3rem;
+  background-color: #2a9d8f;
+  border: 2px solid #264653;
+  border-radius: 2rem;
+  padding: 0.5rem 1rem;
+}
+.toolbar .menu #range-input {
+  width: 10rem;
+  margin-right: 1rem;
+}
+.toolbar .menu #text-input {
+  width: 3rem;
+}
+.toolbar .btn {
+  height: 2rem;
+  margin-bottom: 0.5rem;
+  padding: 0 0.5rem;
+  z-index: 0;
+  background-color: #2a9d8f;
+  border: 2px solid #264653;
+  border-radius: 1.5rem;
+  transition: all 0.5s;
+}
+.toolbar .btn:hover {
+  background-color: #264653;
+  border: 2px solid #2a9d8f;
+  color: white;
+}
+.toolbar .btn:not(:last-child) {
+  margin-right: 0.5rem;
+}
+.toolbar .btn[type=color] {
+  padding: 0.1rem 0.5rem;
+}
+.toolbar .btn i.fa-sort-desc {
+  position: relative;
+  left: 2px;
+  top: -2px;
+}
+.toolbar .color-picker {
+  width: 3rem;
 }
 .toolbar .close {
   display: none;
+}
+
+#modal {
+  background-color: rgba(42, 157, 143, 0.3);
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1;
+  animation: fadein 0.5s;
+}
+#modal #modal-content {
+  height: 200px;
+  width: 300px;
+  background-color: #2a9d8f;
+  border: 3px solid #264653;
+  border-radius: 2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: pop 0.5s;
+  animation-timing-function: cubic-bezier(0, 0.95, 1, 1.1);
+}
+#modal #modal-content p {
+  position: relative;
+  top: calc(50% - 0.5rem);
+  text-align: center;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes pop {
+  from {
+    transform: translate(-50%, -50%) scale(0);
+  }
+  to {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+}
+
+div#app-container {
+  height: 500px;
+  width: 500px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /*# sourceMappingURL=app.css.map */

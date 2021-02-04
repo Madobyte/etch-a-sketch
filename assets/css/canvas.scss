@@ -1,0 +1,17 @@
+@import 'variables';
+
+div#canvas {
+    display: grid;
+    height: $canvas-height;
+    width: $canvas-width;
+    border: 1px solid black;
+
+    .pixel {
+        border: 1px solid black;
+        transition: transform 0.5s;
+
+        &:hover {
+            transform: scale(2);
+        }
+    }
+}

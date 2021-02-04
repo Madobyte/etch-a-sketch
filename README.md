@@ -4,23 +4,27 @@
 - HTML5
 - CSS3
 - SASS
+    - Variables
+    - Nesting
 - Vanilla Javascript
     - Javascript Module
+    - html2canvas
 
 ## Dev's Reflection
 **I finally started learning SASS!**
+
 
 ## Checklist
 - [x] Create a functional Etch-a-Sketch
 - [x] Add an eraser function
 - [x] Add a clear canvas option
 - [x] Add color change option
-    - [ ] Use color wheel if possible
-    - [ ] Hex code and RGB Input
+    - [x] Use color wheel if possible
+    - [x] Hex code and RGB Input
     - [ ] Use Random Color Generator for rainbow function
-- [ ] Add canvas change option
-    - [ ] Use `<input type="range">`
-    - [ ] Use text input
+- [x] Add canvas change option
+    - [x] Use `<input type="range">`
+    - [x] Use text input
 - [ ] Create a beautiful GUI
 - [ ] Create a functional GUI for mobile users
 
@@ -42,3 +46,16 @@ Added a functional `setColor` and `erase` function. The `setColor` does not have
 Since vanilla JS does not have a simple state management, I had a hard time figuring out how to save the previous assigned color after using the eraser.
 
 The erase function only sets the `background-color` to `none`. After all, the `background-color` is white in the first place.
+
+### 02/04/2021
+Added a working `setGridSize` function using both `text` and `range` input type.
+
+Added a `mouseleave` event listener on menus to close it.
+
+I discovered the `color` input type. Used it instead of creating my own `colorPicker` using `map`.
+
+Used `html2canvas` to save your artwork as image.
+
+Added a decent yet barebone styling to the UI.
+
+Added a reusable modal for errors and warnings.
