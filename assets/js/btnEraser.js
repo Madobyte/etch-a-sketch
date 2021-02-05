@@ -1,5 +1,5 @@
 import draw from '../js/draw.js'
-import {color} from './btnSetColor.js'
+import {getColor} from './btnSetColor.js'
 
 export default function btnEraser() {
     const eraserBtn = document.createElement('button');
@@ -11,27 +11,26 @@ export default function btnEraser() {
     toolbar.appendChild(eraserBtn);
 
     eraserBtn.addEventListener('click', () => {
-        enableDisableEraser();
+        eraserBtn.classList.toggle('enabled');
         erase();
     });
+
+    toolbar.addEventListener('click', disableEraser);
 }
 
 function erase() {
-    const prevColor = color;
-
     const eraserBtn = document.querySelector('.eraser-btn');
-    console.log(prevColor, eraserBtn.classList.contains('enabled'))
     if (eraserBtn.classList.contains('enabled')) {
         draw('none');
-    } else draw(prevColor)
+    } else draw(getColor())
 }
 
-function enableDisableEraser() {
+export function disableEraser(e) {
     const eraserBtn = document.querySelector('.eraser-btn');
-    if (!eraserBtn.classList.contains('enabled')) {
-        eraserBtn.style.cssText = 'background-color: #a9294f; color: white;'
+    if (e.target.classList.contains('fa-eraser') || e.target.classList.contains('eraser-btn')) {
+        return;
     } else {
-        eraserBtn.style.cssText = 'background-color: #2a9d8f; color: black;'
+        eraserBtn.classList.remove('enabled');
     }
-    eraserBtn.classList.toggle('enabled');
+    draw(getColor());
 }

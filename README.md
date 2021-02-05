@@ -3,6 +3,7 @@
 **Technologies used:**
 - HTML5
 - CSS3
+    - Animation and Transitions
 - SASS
     - Variables
     - Nesting
@@ -21,12 +22,12 @@
 - [x] Add color change option
     - [x] Use color wheel if possible
     - [x] Hex code and RGB Input
-    - [ ] Use Random Color Generator for rainbow function
+    - [ ] ~~ Use Random Color Generator for rainbow function ~~
 - [x] Add canvas change option
     - [x] Use `<input type="range">`
     - [x] Use text input
-- [ ] Create a beautiful GUI
-- [ ] Create a functional GUI for mobile users
+- [x] Create a beautiful GUI
+- [ ] ~~ Create a functional GUI for mobile users ~~
 
 ## Commits
 ### 02/02/2021 - Initial Commit
@@ -59,3 +60,8 @@ Used `html2canvas` to save your artwork as image.
 Added a decent yet barebone styling to the UI.
 
 Added a reusable modal for errors and warnings.
+
+### 02/05/2021
+Fixed some bugs in the `btnEraser`.
+
+Tested manually for bugs. So far, no bugs detected.

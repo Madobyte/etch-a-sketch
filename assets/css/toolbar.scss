@@ -16,6 +16,8 @@
         border-radius: 2rem;
         padding: 0.5rem 1rem;
 
+        animation: fadedown 0.5s;
+
         #range-input {
             width: 10rem;
             margin-right: 1rem;
@@ -29,27 +31,31 @@
     .btn {
         height: 2rem;
         margin-bottom: 0.5rem;
-        padding: 0 0.5rem;
         z-index: 0;
-
+        
         background-color: #2a9d8f;
         border: 2px solid #264653;
-        border-radius: 1.5rem;
-
+        
         transition: all 0.5s;
-
+        
         &:hover {
             background-color: #264653;
             border: 2px solid #2a9d8f;
             color: white;
         }
-
+        
         &:not(:last-child){
             margin-right: 0.5rem;
         }
-
+        
         &[type='color'] {
-            padding: 0.1rem 0.5rem;
+            padding: 0.2rem;
+            width: 2rem;
+        }
+        
+        &:not([type='color']) {
+            padding: 0 0.5rem;
+            border-radius: 1.5rem;
         }
 
         i.fa-sort-desc {
@@ -63,7 +69,23 @@
         width: 3rem;
     }
 
+    .enabled {
+        background-color: #a9294f; 
+        color: white;
+    }
+
     .close {
         display: none;
+    }
+}
+
+@keyframes fadedown {
+    from {
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
     }
 }

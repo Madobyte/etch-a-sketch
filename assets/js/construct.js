@@ -1,3 +1,5 @@
+import {disableEraser} from './btnEraser.js'
+
 export default function construct(number = 64) {
     const canvas = document.createElement('div');
     canvas.id = 'canvas';
@@ -11,6 +13,8 @@ export default function construct(number = 64) {
     const appContainer = document.getElementById('app-container');
     appContainer.insertBefore(canvas, toolbar.nextSibling);
     putInGrid(number);
+
+    canvas.addEventListener('click', disableEraser)
 }
 
 function putInGrid(number) {
