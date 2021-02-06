@@ -28,4 +28,3 @@ function removeModal(e) {
     if (e.target.id != 'modal') return;
     else modal.remove()
 }
-    

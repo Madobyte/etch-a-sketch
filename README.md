@@ -65,3 +65,8 @@ Added a reusable modal for errors and warnings.
 Fixed some bugs in the `btnEraser`.
 
 Tested manually for bugs. So far, no bugs detected.
+
+### 02/06/2021
+Added `.nojekyll` to make html2canvas work.
+
+Cleaned up some code.

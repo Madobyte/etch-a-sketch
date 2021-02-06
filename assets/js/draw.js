@@ -8,4 +8,3 @@ export default function draw(color = 'black') {
 
     const eraserBtn = document.querySelector('.eraser-btn');
 }
-
