@@ -1,5 +1,6 @@
 # Etch-a-Sketch
-## This Project is part of The Odin Project Curriculum
+**by M. Bambalan**
+
 **Technologies used:**
 - HTML5
 - CSS3
@@ -28,6 +29,7 @@
     - [x] Use text input
 - [x] Create a beautiful GUI
 - [ ] ~~ Create a functional GUI for mobile users ~~
+- [ ] Add Keyboard Support
 
 ## Commits
 ### 02/02/2021 - Initial Commit
@@ -70,3 +72,8 @@ Tested manually for bugs. So far, no bugs detected.
 Added `.nojekyll` to make html2canvas work.
 
 Cleaned up some code.
+
+Added keyboard support for `btnEraser`.
+
+
+**This Project is part of The Odin Project Curriculum**

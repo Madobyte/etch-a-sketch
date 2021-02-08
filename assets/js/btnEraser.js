@@ -16,6 +16,8 @@ export default function btnEraser() {
     });
 
     toolbar.addEventListener('click', disableEraser);
+
+    window.addEventListener('keydown', enableEraser)
 }
 
 function erase() {
@@ -23,6 +25,14 @@ function erase() {
     if (eraserBtn.classList.contains('enabled')) {
         draw('none');
     } else draw(getColor())
+}
+
+function enableEraser(e) {
+    if (e.keyCode === 69) {
+        const eraserBtn = document.querySelector('.eraser-btn');
+        eraserBtn.classList.toggle('enabled');
+        erase();
+    }
 }
 
 export function disableEraser(e) {

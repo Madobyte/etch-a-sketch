@@ -14,7 +14,7 @@ export default function construct(number = 64) {
     appContainer.insertBefore(canvas, toolbar.nextSibling);
     putInGrid(number);
 
-    canvas.addEventListener('click', disableEraser)
+    canvas.addEventListener('click', disableEraser);
 }
 
 function putInGrid(number) {
