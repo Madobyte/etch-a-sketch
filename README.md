@@ -5,12 +5,13 @@
 - HTML5
 - CSS3
     - Animation and Transitions
+    - FontAwesome
 - SASS
     - Variables
     - Nesting
 - Vanilla Javascript
     - Javascript Module
-    - html2canvas
+    - html2canvas module
 
 ## Dev's Reflection
 **I finally started learning SASS!**
@@ -32,14 +33,14 @@
 - [ ] Add Keyboard Support
 
 ## Commits
-### 02/02/2021 - Initial Commit
+**02/02/2021 - Initial Commit**
 Created a functional Etch-a-Sketch.
 
 The size of the grid can be manipulated (although I haven't set a limit to the size yet). I am planning to limit it to a 64x64 grid.
 
 The color can also be manipulated (manually). I plan on using the Random Color Generator `randomColor()`.
 
-### 02/03/2021 
+**02/03/2021**
 Added the toolbar and the icons (not yet functional);
 
 Added a functional clear button that sets `background-color` to `none`.
@@ -50,7 +51,7 @@ Since vanilla JS does not have a simple state management, I had a hard time figu
 
 The erase function only sets the `background-color` to `none`. After all, the `background-color` is white in the first place.
 
-### 02/04/2021
+**02/04/2021**
 Added a working `setGridSize` function using both `text` and `range` input type.
 
 Added a `mouseleave` event listener on menus to close it.
@@ -63,17 +64,22 @@ Added a decent yet barebone styling to the UI.
 
 Added a reusable modal for errors and warnings.
 
-### 02/05/2021
+**02/05/2021**
 Fixed some bugs in the `btnEraser`.
 
 Tested manually for bugs. So far, no bugs detected.
 
-### 02/06/2021
+**02/06/2021**
 Added `.nojekyll` to make html2canvas work.
 
 Cleaned up some code.
 
 Added keyboard support for `btnEraser`.
+
+**02/09/2021**
+Revamped the UI. Added footer and a link to this github repo!
+
+Added FontAwesome. Added animations and transitions
 
 
 **This Project is part of The Odin Project Curriculum**
